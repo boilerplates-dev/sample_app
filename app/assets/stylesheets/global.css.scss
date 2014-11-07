@@ -1,0 +1,41 @@
+@import "bootstrap/variables";
+
+/* mixins, variables, etc. */
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* universal */
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+
+/* forms */
+#error_explanation {
+  color: #f00;
+  padding: 0px;
+  ul {
+    padding-left: 0px;
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
