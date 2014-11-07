@@ -1,0 +1,7 @@
+<%= simple_form_for @micropost, remote: true, authenticity_token: true, defaults: { input_html: { class: 'form-control' } } do |f| %>
+  <%= f.input :content, as: :text,
+                        placeholder: 'Compose new micropost...',
+                        label: false,
+                        input_html: { rows: 5 } %>
+  <%= f.button :submit, 'Post', class: 'btn btn-lg btn-primary' %>
+<% end %>

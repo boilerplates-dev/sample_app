@@ -1,0 +1,9 @@
+<% if @micropost.new_record? %>
+  $('#new_micropost').replaceWith('<%= j render partial: "shared/micropost_form" %>');
+<% else %>
+  $('ol.microposts').prepend('<%= j render partial: 'shared/feed_item', locals: { feed_item: @micropost } %>');
+
+  $('#new_micropost div').removeClass('has-error');
+  $('#new_micropost #micropost_content').val('');
+  $('#new_micropost .glyphicon').remove();
+<% end %>

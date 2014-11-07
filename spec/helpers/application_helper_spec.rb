@@ -1,0 +1,13 @@
+require 'rails_helper'
+
+describe ApplicationHelper do
+  describe 'full_title' do
+    it 'should include the page title' do
+      expect(full_title('foo')).to match(/foo/)
+    end
+
+    it 'should incldue the base title' do
+      expect(full_title('foo')).to match(/Ruby on Rails Tutorial Sample App/)
+    end
+  end
+end
