@@ -46,6 +46,9 @@ gem 'mini_magick'
 # New Relic
 gem 'newrelic_rpm'
 
+# Taming Rails' Default Request Logging
+gem 'lograge'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'rspec-its'
