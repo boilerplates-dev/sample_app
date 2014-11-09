@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.6'
+gem 'rails', '~> 4.2.0.beta'
 
 # Use sqlite as the database for Active Record
 gem 'sqlite3'
@@ -13,7 +13,7 @@ gem 'kaminari'
 gem 'local_time'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '~> 5.0.0.beta'
 
 # User Twitter Bootstrap
 gem 'bootstrap-sass'
@@ -66,6 +66,7 @@ group :development do
   gem 'capistrano', '~> 3.2.0'
   gem 'capistrano-rbenv'
   gem 'capistrano-rails'
+  gem 'capistrano3-puma'
 end
 
 group :test do
