@@ -19,6 +19,3 @@
 /public/uploads
 
 # Ignore the secrets
-/config/database.yml
-/config/newrelic.yml
-/config/secrets.yml
