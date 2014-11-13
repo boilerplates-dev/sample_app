@@ -6,7 +6,7 @@
   <span class="timestamp">
     Posted <%= local_time_ago(feed_item.created_at) %>.
   </span>
-  <span class="content"><%= wrap feed_item.content %></span>
+  <span class="content"><%= feed_item.content.truncate(80, separator: ' ') %></span>
   <span class="image">
     <%= image_tag feed_item.image.thumb.url if feed_item.image? %>
   </span>
