@@ -4,7 +4,7 @@ lock '3.2.1'
 set :rbenv_ruby, '2.1.4'
 
 set :application, 'sample_app'
-set :repo_url, 'https://github.com/hbin/sample_app.git'
+set :repo_url, 'git@coding.net:hbin/sample_app.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
