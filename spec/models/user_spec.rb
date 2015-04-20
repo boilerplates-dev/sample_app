@@ -165,7 +165,7 @@ describe User, type: :model do
 
       before do
         @user.follow!(followed_user)
-        followed_user.microposts.create!(content: Faker::Lorem.sentence)
+        followed_user.microposts.create!(content: FFaker::Lorem.sentence)
       end
 
       its(:feed) { should include(newer_micropost) }

@@ -16,14 +16,14 @@ User.create(name: 'Example User',
             password_confirmation: 'foobar')
 
 100.times do
-  User.create(name: Faker::Name.name,
-              email: Faker::Internet.email,
+  User.create(name: FFaker::Name.name,
+              email: FFaker::Internet.email,
               password: 'foobar',
               password: 'foobar')
 end
 
 User.limit(6).each do |user|
-  50.times { user.microposts.create(content: Faker::Lorem.sentence) }
+  50.times { user.microposts.create(content: FFaker::Lorem.sentence) }
 end
 
 users = User.all
