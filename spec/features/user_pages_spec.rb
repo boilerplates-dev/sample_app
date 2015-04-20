@@ -9,8 +9,8 @@ describe 'User pages', type: :feature do
 
     before do
       sign_in(user)
-      FactoryGirl.create(:user, name: Faker::Name.name, email: Faker::Internet.email)
-      FactoryGirl.create(:user, name: Faker::Name.name, email: Faker::Internet.email)
+      FactoryGirl.create(:user, name: FFaker::Name.name, email: FFaker::Internet.email)
+      FactoryGirl.create(:user, name: FFaker::Name.name, email: FFaker::Internet.email)
       visit users_path
     end
 
@@ -185,8 +185,8 @@ describe 'User pages', type: :feature do
     end
 
     describe 'with valid information' do
-      let(:new_name) { Faker::Name.name }
-      let(:new_email) { Faker::Internet.email }
+      let(:new_name) { FFaker::Name.name }
+      let(:new_email) { FFaker::Internet.email }
 
       before do
         fill_in 'Name',         with: new_name

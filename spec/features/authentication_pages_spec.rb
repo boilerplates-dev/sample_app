@@ -127,7 +127,7 @@ describe 'Authentication', type: :feature do
 
     describe 'as wrong user', type: :request do
       let(:user) { FactoryGirl.create(:user) }
-      let(:wrong_user) { FactoryGirl.create(:user, email: Faker::Internet.email) }
+      let(:wrong_user) { FactoryGirl.create(:user, email: FFaker::Internet.email) }
 
       before { sign_in(user, no_capybara: true) }
 
