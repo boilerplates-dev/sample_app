@@ -10,7 +10,7 @@ class MicropostsController < ApplicationController
         format.html { redirect_to root_url }
         format.js
       else
-        format.html { render 'static_pages/home' }
+        format.html { render 'home/index' }
         format.js
       end
     end
