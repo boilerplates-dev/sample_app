@@ -49,6 +49,10 @@ gem 'newrelic_rpm'
 # Taming Rails' Default Request Logging
 gem 'lograge'
 
+# Backgound Jobs
+gem 'sidekiq'
+gem 'sinatra', require: false
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'rspec-its'
