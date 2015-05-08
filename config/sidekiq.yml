@@ -1,17 +1,10 @@
 ---
 :verbose: false
 :pidfile: tmp/pids/sidekiq.pid
-:concurrency: 5
+:concurrency: <%= ENV['SIDEKIQ_CONCURRENCY'] %>
 :timeout: 30
 :queues:
   - [mailers, 2]
   - [critical, 3]
   - [default, 2]
   - [low, 1]
-
-development:
-  :concurrency: 1
-staging:
-  :concurrency: 10
-production:
-  :concurrency: 20
