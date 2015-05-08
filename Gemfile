@@ -53,6 +53,9 @@ gem 'lograge'
 gem 'sidekiq'
 gem 'sinatra', require: false
 
+# dotevn files
+gem 'dotenv-rails'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'rspec-its'
