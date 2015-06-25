@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.1'
+gem 'rails', '4.2.3'
 
 # Use sqlite as the database for Active Record
 gem 'sqlite3'
@@ -49,12 +49,12 @@ gem 'newrelic_rpm'
 # Taming Rails' Default Request Logging
 gem 'lograge'
 
+# dotenv files
+gem 'dotenv-rails'
+
 # Backgound Jobs
 gem 'sidekiq'
 gem 'sinatra', require: false
-
-# dotevn files
-gem 'dotenv-rails'
 
 group :development, :test do
   gem 'rspec-rails'

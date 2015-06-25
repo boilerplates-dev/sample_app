@@ -10,6 +10,7 @@ set :repo_url, 'git@coding.net:hbin/sample_app.git'
 # Puma
 set :puma_threads, [0, 16]
 set :puma_workers, 2
+set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true
 
@@ -20,7 +21,7 @@ set :puma_init_active_record, true
 # set :log_level, :debug
 
 # Default value for :pty is false
-set :pty, true
+# set :pty, true
 
 # Default value for :linked_files is []
 set :linked_files, %w{.env}
