@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 
-# Use sqlite as the database for Active Record
-gem 'sqlite3'
+# Use Postgres as the database for Active Record
+gem 'pg'
 
 # Pagination
 gem 'kaminari'
@@ -63,6 +63,10 @@ group :development, :test do
 end
 
 group :development do
+  gem 'stackprof'
+  gem 'flamegraph'
+  gem 'rack-mini-profiler'
+
   gem 'spring'
   gem 'quiet_assets'
   gem 'pry-rails'
@@ -88,5 +92,4 @@ end
 
 group :pruduction do
   gem 'puma'
-  gem 'pg'
 end
