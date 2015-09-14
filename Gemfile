@@ -63,6 +63,12 @@ group :development, :test do
 end
 
 group :development do
+  # We will install passenger in Nginx integration mode.
+  # But here, in development environment, standalone mode is good enough.
+  #
+  # https://www.phusionpassenger.com/library/indepth/integration_modes.html
+  gem 'passenger'
+
   gem 'stackprof'
   gem 'flamegraph'
   gem 'rack-mini-profiler'
@@ -80,7 +86,8 @@ group :development do
   gem 'capistrano'
   gem 'capistrano-rbenv'
   gem 'capistrano-rails'
-  gem 'capistrano3-puma'
+  gem 'capistrano-passenger'
+  gem 'capistrano-sidekiq', github: 'hbin/capistrano-sidekiq', branch: 'development'
 end
 
 group :test do
@@ -88,8 +95,4 @@ group :test do
   gem 'database_cleaner'
   gem 'capybara'
   gem 'selenium-webdriver'
-end
-
-group :pruduction do
-  gem 'puma'
 end
