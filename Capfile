@@ -14,16 +14,9 @@ require 'capistrano/deploy'
 #   https://github.com/capistrano/bundler
 #   https://github.com/capistrano/rails
 #
-# require 'capistrano/rvm'
 require 'capistrano/rbenv'
-# require 'capistrano/chruby'
-require 'capistrano/bundler'
-require 'capistrano/rails/assets'
-require 'capistrano/rails/migrations'
-require 'capistrano/puma'
-require 'capistrano/puma/workers'
-require 'capistrano/puma/monit'
-require 'capistrano/puma/nginx'
+require 'capistrano/rails'
+require 'capistrano/passenger'
 
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
 Dir.glob('lib/capistrano/**/*.rake').each { |r| import r }
