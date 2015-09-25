@@ -56,6 +56,8 @@ gem 'dotenv-rails'
 gem 'sidekiq'
 gem 'sinatra', require: false
 
+gem 'rack-cors', require: 'rack/cors'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'rspec-its'
