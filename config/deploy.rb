@@ -2,7 +2,6 @@ lock '3.4.0'
 
 set :rbenv_ruby, "#{File.read('.ruby-version').chomp}"
 set :rbenv_type, :user
-set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 
 set :passenger_ruby, -> { "#{fetch(:rbenv_ruby_dir)}/bin/ruby" }
 
@@ -25,6 +24,14 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets}
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+
+namespace :bundler do
+  task :map_bins do
+    fetch(:bundle_bins).each do |command|
+      SSHKit.config.command_map.prefix[command.to_sym].push('dotenv')
+    end
+  end
+end
 
 namespace :deploy do
   desc 'Restart application'
