@@ -6,7 +6,7 @@ set :rbenv_type, :user
 set :passenger_ruby, -> { "#{fetch(:rbenv_ruby_dir)}/bin/ruby" }
 
 set :application, 'sample_app'
-set :repo_url, 'git@git.coding.net:hbin/sample_app.git'
+set :repo_url, 'https://github.com/boilerplates-dev/sample_app.git'
 
 set :deploy_to, -> { "/var/www/#{fetch(:application)}_#{fetch(:stage)}" }
 
