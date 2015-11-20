@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.5'
 
 # Use Postgres as the database for Active Record
 gem 'pg'
@@ -89,7 +89,7 @@ group :development do
   gem 'capistrano-rbenv'
   gem 'capistrano-rails'
   gem 'capistrano-passenger'
-  gem 'capistrano-sidekiq', github: 'hbin/capistrano-sidekiq', branch: 'development'
+  gem 'capistrano-sidekiq'
 end
 
 group :test do
