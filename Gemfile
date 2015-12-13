@@ -65,12 +65,6 @@ group :development, :test do
 end
 
 group :development do
-  # We will install passenger in Nginx integration mode.
-  # But here, in development environment, standalone mode is good enough.
-  #
-  # https://www.phusionpassenger.com/library/indepth/integration_modes.html
-  gem 'passenger'
-
   gem 'stackprof'
   gem 'flamegraph'
   gem 'rack-mini-profiler'
