@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails', '5.0.1'
 
 # Use Postgres as the database for Active Record
 gem 'pg'
@@ -54,7 +54,7 @@ gem 'dotenv-rails'
 
 # Backgound Jobs
 gem 'sidekiq'
-gem 'sinatra', require: false
+gem 'sinatra', github: 'sinatra/sinatra', require: false
 
 gem 'rack-cors', require: 'rack/cors'
 
@@ -70,7 +70,6 @@ group :development do
   gem 'rack-mini-profiler'
 
   gem 'spring'
-  gem 'quiet_assets'
   gem 'pry-rails'
   gem 'pry-stack_explorer'
   gem 'pry-remote'
