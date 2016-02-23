@@ -144,13 +144,13 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.3)
     multi_json (1.11.2)
+    mysql2 (0.4.2)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.0.2)
     newrelic_rpm (3.14.1.311)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
-    pg (0.18.4)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -305,8 +305,8 @@ DEPENDENCIES
   local_time
   lograge
   mini_magick
+  mysql2
   newrelic_rpm
-  pg
   pry-byebug
   pry-rails
   pry-remote
