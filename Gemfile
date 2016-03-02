@@ -44,6 +44,9 @@ gem 'jbuilder'
 gem 'carrierwave'
 gem 'mini_magick'
 
+# Captcha
+gem 'rucaptcha'
+
 # New Relic
 gem 'newrelic_rpm'
 

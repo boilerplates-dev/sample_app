@@ -1,6 +1,8 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  mount RuCaptcha::Engine => '/rucaptcha'
+
   concern :js_disable do
     member do
       get :delete
