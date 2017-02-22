@@ -1,0 +1,42 @@
+version: "2"
+services:
+  db:
+    image: "postgres:9.6.2"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres:/var/lib/postgresql/data
+
+  redis:
+    image: "redis:3.2.8"
+    command: redis-server
+    ports:
+      - "6379:6379"
+    volumes:
+      - "redis:/var/lib/redis/data"
+
+  web:
+    depends_on:
+      - db
+      - redis
+    build: .
+    command: bundle exec dotenv rails server --port 3000 --binding 0.0.0.0
+    ports:
+      - "3000:3000"
+    links:
+      - db
+    volumes:
+      - .:/app
+
+  sidekiq:
+    depends_on:
+      - db
+      - redis
+    build: .
+    command: bundle exec dotenv sidekiq -C config/sidekiq.yml
+    volumes:
+      - .:/app
+
+volumes:
+  redis:
+  postgres:
