@@ -1,9 +1,12 @@
 FROM ruby:2.3.3
 
+RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main' > /etc/apt/sources.list.d/postgresql.list
+RUN wget -q https://www.postgresql.org/media/keys/ACCC4CF8.asc -O - | apt-key add -
+
 RUN apt-get update && apt-get install -y  --no-install-recommends \
     build-essential \
     libpq-dev \
-    postgresql-client \
+    postgresql-client-9.6 \
     libxml2-dev \
     libxslt1-dev \
     nodejs \
