@@ -195,6 +195,7 @@ GEM
       binding_of_caller (>= 0.7)
       pry (>= 0.9.11)
     public_suffix (2.0.5)
+    puma (3.7.1)
     rack (2.0.1)
     rack-cors (0.4.1)
     rack-mini-profiler (0.10.2)
@@ -332,6 +333,7 @@ DEPENDENCIES
   pry-rails
   pry-remote
   pry-stack_explorer
+  puma
   rack-cors
   rack-mini-profiler
   rails (= 5.0.1)
