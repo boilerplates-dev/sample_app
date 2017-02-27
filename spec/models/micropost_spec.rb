@@ -4,7 +4,7 @@ describe Micropost, type: :model do
   let(:user) { FactoryGirl.create(:user) }
 
   before do
-    @micropost = user.microposts.build(content: FFaker::Lorem.sentence,
+    @micropost = user.microposts.build(content: Faker::Lorem.sentence,
                                        user_id: user.id)
   end
 

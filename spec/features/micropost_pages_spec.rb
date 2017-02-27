@@ -22,7 +22,7 @@ describe 'Microposts pages', type: :feature do
 
     describe 'with valid information' do
       before do
-        fill_in 'micropost_content', with: FFaker::Lorem.sentence
+        fill_in 'micropost_content', with: Faker::Lorem.sentence
       end
 
       it 'should create a micropost' do

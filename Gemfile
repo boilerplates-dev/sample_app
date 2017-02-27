@@ -64,7 +64,7 @@ gem 'rack-cors', require: 'rack/cors'
 group :development, :test do
   gem 'rspec-rails'
   gem 'rspec-its'
-  gem 'ffaker'
+  gem 'faker'
 end
 
 group :development do
