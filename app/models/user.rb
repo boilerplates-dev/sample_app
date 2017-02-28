@@ -48,8 +48,9 @@ class User < ActiveRecord::Base
   private
 
   def generate_encrypted_token(column)
-    begin
+    loop do
       self[column] = Digest::SHA1.hexdigest(SecureRandom.urlsafe_base64)
-    end while User.exists?(column => self[column])
+      break unless User.exists?(column => self[column])
+    end
   end
 end

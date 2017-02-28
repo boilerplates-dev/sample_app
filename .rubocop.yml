@@ -1,0 +1,46 @@
+AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - 'Gemfile'
+    - 'bin/*'
+    - 'db/**/*'
+    - 'spec/spec_helper.rb'
+
+# Rails:
+#   Enabled: true
+
+Metrics/LineLength:
+  Max: 120
+  AllowHeredoc: true
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+  IgnoreCopDirectives: false
+  IgnoredPatterns: []
+  Exclude:
+    - '**/*.rake'
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/IdenticalConditionalBranches:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false

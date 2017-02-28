@@ -62,6 +62,7 @@ gem 'sinatra', github: 'sinatra/sinatra', require: false
 gem 'rack-cors', require: 'rack/cors'
 
 group :development, :test do
+  gem 'rubocop'
   gem 'rspec-rails'
   gem 'rspec-its'
   gem 'faker'

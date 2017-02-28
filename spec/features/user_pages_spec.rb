@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe 'User pages', type: :feature do
-
   subject { page }
 
   describe 'index' do
@@ -213,9 +212,7 @@ describe 'User pages', type: :feature do
       let(:params) do
         { user:
           { admin: true, password: user.password,
-            password_confirmation: user.password
-          }
-        }
+            password_confirmation: user.password } }
       end
       before do
         sign_in user, no_capybara: true

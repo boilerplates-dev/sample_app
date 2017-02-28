@@ -1,8 +1,8 @@
 lock '3.4.0'
 
 set :rbenv_type, :user
-set :rbenv_ruby, "#{File.read('.ruby-version').chomp}"
-set :rbenv_custom_path, '$HOME/.rbenv'  # will be fixed by https://github.com/capistrano/rbenv/pull/59
+set :rbenv_ruby, File.read('.ruby-version').chomp.to_s
+set :rbenv_custom_path, '$HOME/.rbenv' # will be fixed by https://github.com/capistrano/rbenv/pull/59
 
 set :passenger_ruby, -> { "#{fetch(:rbenv_ruby_dir)}/bin/ruby" }
 

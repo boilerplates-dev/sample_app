@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe 'Authentication', type: :feature do
-
   subject { page }
 
   describe 'signin page' do
@@ -50,7 +49,7 @@ describe 'Authentication', type: :feature do
       let(:user) { FactoryGirl.create(:user) }
 
       describe 'when attempting to visit a protected page' do
-        describe 'in the Users controller', type: :request  do
+        describe 'in the Users controller', type: :request do
           describe 'visiting the edit page' do
             before { visit edit_user_path(user) }
             it { should have_title('Sign in') }
@@ -104,8 +103,8 @@ describe 'Authentication', type: :feature do
         describe 'after signing in' do
           before do
             visit edit_user_path(user)
-            fill_in 'Email',  with: user.email
-            fill_in 'Password',  with: user.password
+            fill_in 'Email', with: user.email
+            fill_in 'Password', with: user.password
             click_button 'Sign in'
           end
 
