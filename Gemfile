@@ -57,7 +57,7 @@ gem 'dotenv-rails'
 
 # Backgound Jobs
 gem 'sidekiq'
-gem 'sinatra', github: 'sinatra/sinatra', require: false
+gem 'sinatra', '~> 2.0.0.rc1'
 
 gem 'rack-cors', require: 'rack/cors'
 
