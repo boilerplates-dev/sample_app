@@ -15,6 +15,11 @@ services:
     volumes:
       - "redis:/var/lib/redis/data"
 
+  mailcatcher:
+    image: "schickling/mailcatcher:latest"
+    ports:
+      - "1080:1080"
+
   web:
     depends_on:
       - db
