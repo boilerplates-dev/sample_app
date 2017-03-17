@@ -21,6 +21,8 @@ services:
       - "1080:1080"
 
   web:
+    tty: true
+    stdin_open: true
     depends_on:
       - db
       - redis
