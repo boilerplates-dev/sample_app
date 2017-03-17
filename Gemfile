@@ -59,6 +59,9 @@ gem 'dotenv-rails'
 gem 'sidekiq'
 gem 'sinatra', '~> 2.0.0.rc1'
 
+# Cron Jobs
+gem 'whenever', require: false
+
 gem 'rack-cors', require: 'rack/cors'
 
 group :development, :test do
