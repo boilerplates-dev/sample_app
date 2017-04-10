@@ -1,0 +1,5 @@
+# https://docs.travis-ci.com/user/database-setup/#Using-PostgreSQL-in-your-Builds
+
+test:
+  adapter: postgresql
+  database: travis_ci_test

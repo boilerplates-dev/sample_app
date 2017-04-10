@@ -1,0 +1,16 @@
+language: ruby
+
+dist: trusty
+sudo: false
+
+addons:
+  postgresql: "9.6"
+
+bundler_args: --without production
+
+services:
+  - redis-server
+
+before_install:
+ - cp config/database.yml.travis config/database.yml
+ - psql -c 'create database travis_ci_test;' -U postgres
