@@ -46,7 +46,8 @@ gem 'jbuilder'
 gem 'carrierwave'
 gem 'mini_magick'
 
-# New Relic
+# Monitor
+gem 'health_check'
 gem 'newrelic_rpm'
 
 # Taming Rails' Default Request Logging
@@ -57,7 +58,7 @@ gem 'dotenv-rails'
 
 # Backgound Jobs
 gem 'sidekiq'
-gem 'sinatra', '~> 2.0.0.rc1'
+gem 'sinatra', '2.0.0.rc2'
 
 # Cron Jobs
 gem 'whenever', require: false
