@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.0.1'
+gem 'rails', '5.1.4'
 
 # Use Postgres as the database for Active Record
 gem 'pg'
@@ -58,7 +58,6 @@ gem 'dotenv-rails'
 
 # Backgound Jobs
 gem 'sidekiq'
-gem 'sinatra', '2.0.0.rc2'
 
 # Cron Jobs
 gem 'whenever', require: false
@@ -79,9 +78,6 @@ group :development do
 
   gem 'spring'
   gem 'pry-rails'
-  gem 'pry-stack_explorer'
-  gem 'pry-remote'
-  gem 'pry-byebug'
   gem 'hirb'
   gem 'coolline'
   gem 'awesome_print'
