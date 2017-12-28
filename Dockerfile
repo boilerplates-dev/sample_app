@@ -5,19 +5,19 @@ FROM ruby:2.5.0
 # RUN echo 'deb http://repo.mysql.com/apt/debian/ jessie mysql-5.6' > /etc/apt/sources.list.d/mysql.list
 # RUN apt-key adv --keyserver pgp.mit.edu --recv-keys 5072E1F5
 
-RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main' > /etc/apt/sources.list.d/postgresql.list
-RUN wget -q https://www.postgresql.org/media/keys/ACCC4CF8.asc -O - | apt-key add -
+# RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main' > /etc/apt/sources.list.d/postgresql.list
+# RUN wget -q https://www.postgresql.org/media/keys/ACCC4CF8.asc -O - | apt-key add -
 
 RUN apt-get update && apt-get install -y  --no-install-recommends \
     build-essential \
-    libpq-dev \
+    # libpq-dev \
     # mysql-client-5.6 \ MySQL users
-    postgresql-client-9.6 \
-    libxml2-dev \
-    libxslt1-dev \
+    # postgresql-client-9.6 \
+    # libxml2-dev \
+    # libxslt1-dev \
     nodejs \
-    libqt4-webkit \
-    libqt4-dev xvfb \
+    # libqt4-webkit \
+    # libqt4-dev xvfb \
     less \
 && rm -rf /var/lib/apt/lists/*
 
