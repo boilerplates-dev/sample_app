@@ -24,6 +24,9 @@ class User < ActiveRecord::Base
   # additional config (i.e. accepts_nested_attribute_for etc...) ..............
   has_secure_password
 
+  # Make sure the user has not opted out.
+  mailkick_user
+
   # class methods .............................................................
 
   # public instance methods ...................................................

@@ -68,8 +68,9 @@ gem 'whenever', require: false
 # CORS
 gem 'rack-cors', require: 'rack/cors'
 
-# Email
-gem 'ahoy_email'
+# Email Helpers
+gem 'ahoy_email' # Email tracking
+gem 'mailkick' # Email subscriptions
 
 group :development, :test do
   gem 'rubocop'

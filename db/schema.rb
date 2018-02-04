@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180204040332) do
+ActiveRecord::Schema.define(version: 20180204040333) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,19 @@ ActiveRecord::Schema.define(version: 20180204040332) do
     t.datetime "clicked_at"
     t.index ["token"], name: "index_ahoy_messages_on_token"
     t.index ["user_id", "user_type"], name: "index_ahoy_messages_on_user_id_and_user_type"
+  end
+
+  create_table "mailkick_opt_outs", force: :cascade do |t|
+    t.string "email"
+    t.integer "user_id"
+    t.string "user_type"
+    t.boolean "active", default: true, null: false
+    t.string "reason"
+    t.string "list"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_mailkick_opt_outs_on_email"
+    t.index ["user_id", "user_type"], name: "index_mailkick_opt_outs_on_user_id_and_user_type"
   end
 
   create_table "microposts", id: :serial, force: :cascade do |t|
