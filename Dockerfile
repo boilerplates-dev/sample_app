@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y  --no-install-recommends \
     build-essential \
     # libpq-dev \
     # mysql-client-5.6 \ MySQL users
-    # postgresql-client-9.6 \
+    postgresql-client-9.6 \
     # libxml2-dev \
     # libxslt1-dev \
     nodejs \
