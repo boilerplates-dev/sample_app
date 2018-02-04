@@ -6,6 +6,9 @@ gem 'rails', '5.1.4'
 # Use Postgres as the database for Active Record
 gem 'pg'
 
+# ActiveRecord Helper
+gem 'active_record_union'
+
 # Use Puma as the app server
 gem 'puma'
 
@@ -62,6 +65,7 @@ gem 'sidekiq'
 # Cron Jobs
 gem 'whenever', require: false
 
+# CORS
 gem 'rack-cors', require: 'rack/cors'
 
 group :development, :test do
