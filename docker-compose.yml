@@ -7,9 +7,9 @@ services:
 
   redis:
     image: "redis:3.2.8"
-    command: redis-server
     volumes:
       - "redis:/var/lib/redis/data"
+    restart: always
 
   mailcatcher:
     image: "schickling/mailcatcher:latest"
