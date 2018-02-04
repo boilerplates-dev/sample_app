@@ -22,6 +22,7 @@ RUN apt-get update && apt-get install -y  --no-install-recommends \
 && rm -rf /var/lib/apt/lists/*
 
 ENV APP_HOME /app
+ENV BUNDLE_PATH /gems
 RUN mkdir $APP_HOME
 VOLUME $APP_HOME
 WORKDIR $APP_HOME

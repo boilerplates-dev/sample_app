@@ -13,6 +13,14 @@ services:
 
   mailcatcher:
     image: "schickling/mailcatcher:latest"
+    ports:
+      - "1080:1080"
+      - "1025:1025"
+
+  bundler:
+    image: busybox
+    volumes:
+      - /gems
 
   web:
     tty: true
@@ -20,23 +28,27 @@ services:
     depends_on:
       - db
       - redis
+      - mailcatcher
     build: .
-    command: bundle exec dotenv rails server --port 3000 --binding 0.0.0.0
+    command: ./script/start_web
     ports:
       - "3000:3000"
-    links:
-      - db
     volumes:
       - .:/app
+    volumes_from:
+      - bundler
 
-  sidekiq:
+  worker:
     depends_on:
       - db
       - redis
+      - mailcatcher
     build: .
-    command: bundle exec dotenv sidekiq -C config/sidekiq.yml
+    command: ./script/start_worker
     volumes:
       - .:/app
+    volumes_from:
+      - bundler
 
 volumes:
   redis:

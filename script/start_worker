@@ -1,0 +1,5 @@
+#!/bin/bash
+
+bundle check || bundle install
+
+bundle exec dotenv sidekiq -C config/sidekiq.yml
