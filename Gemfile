@@ -68,6 +68,9 @@ gem 'whenever', require: false
 # CORS
 gem 'rack-cors', require: 'rack/cors'
 
+# Email
+gem 'ahoy_email'
+
 group :development, :test do
   gem 'rubocop'
   gem 'rspec-rails'
