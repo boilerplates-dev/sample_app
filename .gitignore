@@ -24,3 +24,6 @@
 # Ignore the secrets
 /.env
 /.env.*
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key

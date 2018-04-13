@@ -11,6 +11,8 @@ set :repo_url, 'https://github.com/boilerplates-dev/sample_app.git'
 
 set :deploy_to, -> { "/var/www/#{fetch(:application)}_#{fetch(:stage)}" }
 
+set :passenger_restart_with_touch, true
+
 # Default value for :log_level is :debug
 # set :log_level, :debug
 

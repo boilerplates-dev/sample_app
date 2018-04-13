@@ -1,16 +1,16 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.1.4'
-
-# Use Postgres as the database for Active Record
-gem 'pg'
+gem 'rails', '5.2.0'
 
 # ActiveRecord Helper
 gem 'active_record_union'
 
+# Use Postgres as the database for Active Record
+gem 'pg'
+
 # Use Puma as the app server
-gem 'puma'
+gem 'puma', '~> 3.11'
 
 # Pagination
 gem 'kaminari'
@@ -19,7 +19,7 @@ gem 'kaminari'
 gem 'local_time'
 
 # Use SCSS for stylesheets
-gem 'sass-rails'
+gem 'sass-rails', '~> 5.0'
 
 # User Twitter Bootstrap
 gem 'bootstrap-sass'
@@ -31,22 +31,21 @@ gem 'simple_form'
 gem 'bcrypt'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier'
+gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails'
+gem 'coffee-rails', '~> 4.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+gem 'turbolinks', '~> 5'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder'
+gem 'jbuilder', '~> 2.5'
 
 # Upload files
-gem 'carrierwave'
 gem 'mini_magick'
 
 # Monitor
@@ -72,6 +71,9 @@ gem 'rack-cors', require: 'rack/cors'
 gem 'ahoy_email' # Email tracking
 gem 'mailkick' # Email subscriptions
 
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', require: false
+
 group :development, :test do
   gem 'rubocop'
   gem 'rspec-rails'
@@ -85,6 +87,8 @@ group :development do
   gem 'rack-mini-profiler'
 
   gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+
   gem 'pry-rails'
   gem 'hirb'
   gem 'coolline'
@@ -100,6 +104,11 @@ end
 group :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner'
+
+  # Adds support for Capybara system testing and selenium driver
   gem 'capybara'
   gem 'selenium-webdriver'
+
+  # Easy installation and use of chromedriver to run system tests with Chrome
+  gem 'chromedriver-helper'
 end
