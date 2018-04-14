@@ -17,6 +17,7 @@ class MicropostsController < ApplicationController
   end
 
   def destroy
+    @micropost.image.purge_later if @micropost.image.attached?
     @micropost.destroy
 
     respond_to do |format|

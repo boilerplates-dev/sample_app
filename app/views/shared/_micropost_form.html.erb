@@ -3,5 +3,6 @@
                         placeholder: 'Compose new micropost...',
                         label: false,
                         input_html: { rows: 5 } %>
+  <%= f.file_field :image %>
   <%= f.button :submit, 'Post', class: 'btn btn-lg btn-primary' %>
 <% end %>

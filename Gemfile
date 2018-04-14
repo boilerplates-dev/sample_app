@@ -48,6 +48,10 @@ gem 'jbuilder', '~> 2.5'
 # Upload files
 gem 'mini_magick'
 
+# Amazon
+gem 'aws-sdk-rails'
+gem 'aws-sdk-s3'
+
 # Monitor
 gem 'health_check'
 gem 'newrelic_rpm'
