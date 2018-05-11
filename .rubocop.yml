@@ -6,6 +6,9 @@ AllCops:
     - 'db/**/*'
     - 'spec/spec_helper.rb'
 
+Style/GlobalVars:
+  AllowedVariables: [$script, $redis]
+
 # Rails:
 #   Enabled: true
 
