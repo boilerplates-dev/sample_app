@@ -1,6 +1,4 @@
-role :app, %w(deploy@sample.com)
-role :web, %w(deploy@sample.com)
-role :db,  %w(deploy@sample.com)
+role :app, %w[deploy@172.20.30.20 deploy@172.20.30.21]
 
 set :stage, :production
 set :branch, 'master'
