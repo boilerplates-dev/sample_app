@@ -2,4 +2,5 @@
 
 bundle check || bundle install
 
-bundle exec dotenv sidekiq -C config/sidekiq.yml
+# https://www.mikeperham.com/2018/04/25/taming-rails-memory-bloat/
+MALLOC_ARENA_MAX=2 bundle exec dotenv sidekiq -C config/sidekiq.yml
