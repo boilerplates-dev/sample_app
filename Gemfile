@@ -71,6 +71,10 @@ gem 'whenever', require: false
 # CORS
 gem 'rack-cors', require: 'rack/cors'
 
+# Rolloutable
+gem 'degrade'
+gem 'rollout'
+
 # Email Helpers
 gem 'ahoy_email' # Email tracking
 gem 'mailkick' # Email subscriptions
