@@ -6,8 +6,8 @@ class Micropost < ApplicationRecord
   has_one_attached :image
 
   # validations ...............................................................
-  validates :user_id, presence: :true
-  validates :content, presence: :true, length: { maximum: 140 }
+  validates :user_id, presence: true
+  validates :content, presence: true, length: { maximum: 140 }
 
   # callbacks .................................................................
   # scopes ....................................................................
