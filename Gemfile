@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.2.0'
+gem 'rails', '6.1.0'
 
 # ActiveRecord Helper
 gem 'active_record_union'
@@ -10,7 +10,7 @@ gem 'active_record_union'
 gem 'pg'
 
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma'
 
 # Pagination
 gem 'kaminari'
@@ -19,7 +19,7 @@ gem 'kaminari'
 gem 'local_time'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 
 # User Twitter Bootstrap
 gem 'bootstrap-sass'
@@ -31,19 +31,19 @@ gem 'simple_form'
 gem 'bcrypt'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks', '~> 5'
+gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder'
 
 # Upload files
 gem 'mini_magick'
@@ -95,7 +95,7 @@ group :development do
   gem 'rack-mini-profiler'
 
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen'
 
   gem 'pry-rails'
   gem 'hirb'
@@ -118,5 +118,5 @@ group :test do
   gem 'selenium-webdriver'
 
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  gem 'webdrivers'
 end

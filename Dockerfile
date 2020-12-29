@@ -1,24 +1,28 @@
-FROM ruby:2.5.0
+FROM ruby:3.0.0
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+  apt-utils curl wget lsb-release less \
+  && apt-get clean all
 
 # For MySQL users
 #
-# RUN echo 'deb http://repo.mysql.com/apt/debian/ jessie mysql-5.6' > /etc/apt/sources.list.d/mysql.list
+# RUN echo "deb http://repo.mysql.com/apt/debian/ $(lsb_release -cs) mysql-8.0" > /etc/apt/sources.list.d/mysql.list
 # RUN apt-key adv --keyserver pgp.mit.edu --recv-keys 5072E1F5
 
-# RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main' > /etc/apt/sources.list.d/postgresql.list
-# RUN wget -q https://www.postgresql.org/media/keys/ACCC4CF8.asc -O - | apt-key add -
+# For PostgreSQL users
+#
+RUN echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/postgresql.list
+RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 
-RUN apt-get update && apt-get install -y  --no-install-recommends \
-    build-essential \
-    # libpq-dev \
-    # mysql-client-5.6 \ MySQL users
-    postgresql-client-9.6 \
-    # libxml2-dev \
-    # libxslt1-dev \
-    nodejs \
-    # libqt4-webkit \
-    # libqt4-dev xvfb \
-    less \
+# ARG DEBIAN_FRONTEND=noninteractive
+# ENV TZ=Asia/Shanghai
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+  autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev \
+  zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev \
+  # libdb-dev mysql-community-client \
+  libpq-dev postgresql-client-13 \
+  git nodejs \
 && rm -rf /var/lib/apt/lists/*
 
 ENV APP_HOME /app
